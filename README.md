@@ -1,4 +1,4 @@
-# 🤖 LangGraph Agents — Building AI Agents Step by Step
+#  LangGraph Agents — Building AI Agents Step by Step
 
 > **AI/ML Engineer in progress** | LangGraph · LangChain · Groq · Python
 
@@ -7,7 +7,7 @@ Each notebook = one new concept. Each version = more powerful agent.
 
 ---
 
-## 🚀 Live Notebooks
+##  Live Notebooks
 
 | Version | What It Does | Open |
 |---------|-------------|------|
@@ -17,7 +17,7 @@ Each notebook = one new concept. Each version = more powerful agent.
 
 ---
 
-## 🧠 What Is This?
+##  What Is This?
 
 A step-by-step build of a LangGraph AI agent using:
 - **Groq LLM** (llama-3.1-8b-instant) as the brain
@@ -27,7 +27,7 @@ A step-by-step build of a LangGraph AI agent using:
 
 ---
 
-## 🏗️ Agent Architecture (v3)
+##  Agent Architecture (v3)
 
 User Input
 ↓
@@ -43,7 +43,7 @@ back to Agent
 
 ---
 
-## 🛠️ Stack
+##  Stack
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1.1.9-green)
@@ -52,7 +52,7 @@ back to Agent
 
 ---
 
-## 📁 Versions Roadmap
+##  Versions Roadmap
 
 | Version | Concept | Status |
 |---------|---------|--------|
@@ -67,7 +67,7 @@ back to Agent
 
 ---
 
-## 👤 Author
+##  Author
 
 **Muhammed Danish T** — AI/ML Engineer
 [GitHub](https://github.com/muhammeddanisht) · [HuggingFace](https://huggingface.co/danish811)
