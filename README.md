@@ -1,74 +1,56 @@
-#  LangGraph Agents — Building AI Agents Step by Step
+# 🤖 LangGraph Agents — Learning Journey
 
-> **AI/ML Engineer in progress** | LangGraph · LangChain · Groq · Python
-
-Building a production-grade AI agent from scratch — version by version.
-Each notebook = one new concept. Each version = more powerful agent.
+> Building production-ready AI agents with LangGraph, step by step.
 
 ---
 
-##  Live Notebooks
+## 🗺️ Version Roadmap
 
-| Version | What It Does | Open |
-|---------|-------------|------|
-| v1 — Basic Graph | State + Nodes + Edges | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/muhammeddanisht/langgraph-agents/blob/main/langgraph_v1_basics.ipynb) |
-| v2 — LLM Node | Groq LLM + Memory + Conversation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/muhammeddanisht/langgraph-agents/blob/main/langgraph_v2_llm_node.ipynb) |
-| v3 — Tool Calling | @tool + ToolNode + Agent Loop | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/muhammeddanisht/langgraph-agents/blob/main/langgraph_v3_tools.ipynb) |
-
----
-
-##  What Is This?
-
-A step-by-step build of a LangGraph AI agent using:
-- **Groq LLM** (llama-3.1-8b-instant) as the brain
-- **@tool decorator** to give agent real capabilities
-- **ToolNode + tools_condition** for the agent loop
-- **MemorySaver** for persistent conversation memory
+| Version | What | Status |
+|---|---|---|
+| v1 | Basic graph — State + Nodes + Edges | ✅ Done |
+| v2 | Groq LLM + MessagesState + MemorySaver | ✅ Done |
+| v3 | @tool + ToolNode + tools_condition + agent loop | ✅ Done |
+| v4 | Conditional edges + Context Engineering | ✅ Done |
+| v5 | Memory + MCP integration | 🔄 Next |
+| v6 | ReAct pattern | ⬜ |
+| v7 | Multi-agent + A2A | ⬜ |
+| v8 | Final Streamlit deploy | ⬜ |
 
 ---
 
-##  Agent Architecture (v3)
+## 📂 Notebooks
 
-User Input
-↓
-[Agent Node] — Groq LLM decides
-↓
-tools_condition (traffic signal)
-↓ tool needed          ↓ no tool
-[Tool Node]              END
-↓
-back to Agent
+| Notebook | Description | Open |
+|---|---|---|
+| v1 | Basic graph | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V1_LINK) |
+| v2 | LLM + Memory | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V2_LINK) |
+| v3 | Tools + Agent Loop | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V3_LINK) |
+| v4 | Conditional Edges | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V4_LINK) |
 
 ---
 
----
+## 🔧 Tech Stack
 
-##  Stack
-
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1.1.9-green)
 ![Groq](https://img.shields.io/badge/Groq-LLaMA3-orange)
-![LangChain](https://img.shields.io/badge/LangChain-latest-yellow)
+![LangChain](https://img.shields.io/badge/LangChain-0.3-yellow)
 
 ---
 
-##  Versions Roadmap
+## ✅ Verified Versions
 
-| Version | Concept | Status |
-|---------|---------|--------|
-| v1 | Basic graph — State, Nodes, Edges | ✅ Done |
-| v2 | Groq LLM + MessagesState + Memory | ✅ Done |
-| v3 | @tool + ToolNode + Agent Loop | ✅ Done |
-| v4 | Conditional edges + Context Engineering | 🔄 Building |
-| v5 | MCP Integration (Gmail/Calendar) | ⬜ Soon |
-| v6 | ReAct Pattern | ⬜ Soon |
-| v7 | Multi-Agent + A2A | ⬜ Soon |
-| v8 | Final Deploy — Streamlit on HuggingFace | ⬜ Soon |
+| Package | Version |
+|---|---|
+| LangGraph | 1.1.9 |
+| langchain-groq | 1.1.2 |
+| langchain-core | 1.3.1 |
 
 ---
 
-##  Author
+## 👤 Author
 
-**Muhammed Danish T** — AI/ML Engineer
-[GitHub](https://github.com/muhammeddanisht) · [HuggingFace](https://huggingface.co/danish811)
- 
+**Muhammed Danish T**  
+[![GitHub](https://img.shields.io/badge/GitHub-muhammeddanisht-black)](https://github.com/muhammeddanisht)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-danish811-yellow)](https://huggingface.co/danish811)
