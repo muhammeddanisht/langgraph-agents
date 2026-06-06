@@ -23,10 +23,10 @@
 
 | Notebook | Description | Open |
 |---|---|---|
-| v1 | Basic graph | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V1_LINK) |
-| v2 | LLM + Memory | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V2_LINK) |
-| v3 | Tools + Agent Loop | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V3_LINK) |
-| v4 | Conditional Edges | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](YOUR_V4_LINK) |
+| v1 | Basic graph | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v1_basics.ipynb) |
+| v2 | LLM + Memory | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v2_llm_node.ipynb) |
+| v3 | Tools + Agent Loop | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v3_tools.ipynb) |
+| v4 | Conditional Edges | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v4_conditional_edges.ipynb) |
 
 ---
 
