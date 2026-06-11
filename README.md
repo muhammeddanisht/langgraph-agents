@@ -33,7 +33,7 @@ build in 2026.
 | V2 | `langgraph_v2_llm_node.ipynb` | LLM integration | ChatGroq, MessagesState, MemorySaver, thread_id | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v2_llm_node.ipynb) |
 | V3 | `langgraph_v3_tools.ipynb` | Tool use + agent loop | @tool, ToolNode, tools_condition, ReAct loop | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v3_tools.ipynb) |
 | V4 | `langgraph_v4_conditional_edges.ipynb` | Routing + Context Engineering | Conditional edges, classifier node, system prompts | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/muhammeddanisht/langgraph-agents/blob/main/langgraph_v4_conditional_edges.ipynb) |
-| V5 | `langgraph_v5_memory.ipynb` | Dual memory architecture | MemorySaver, InMemoryStore, LLM fact extraction | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)]([YOUR_V5_LINK](https://colab.research.google.com/drive/1DHSCnH5_v5P0rIURVeOZGsTdQQ07i1R5)) |
+| V5 | `langgraph_v5_memory.ipynb` | Dual memory architecture | MemorySaver, InMemoryStore, LLM fact extraction | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DHSCnH5_v5P0rIURVeOZGsTdQQ07i1R5) |
 
 ---
 
