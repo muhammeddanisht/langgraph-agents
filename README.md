@@ -1,103 +1,146 @@
 # 🤖 LangGraph Agent Series — V1 to V8
 
-> Self-taught AI engineer building production-grade LangGraph agents
-> from scratch. 8 notebooks showing progressive skill growth —
-> from graph basics to a live deployed web app.
+> Self-taught AI engineer. Zero coding background. Built 8 production-grade
+> LangGraph agents from scratch — deployed, documented, and decision-recorded.
 
 ## 🚀 Live Demo
-👉 **[Click to use the agent — no setup required](https://danish-ai-agent.streamlit.app)**
+👉 **[Use the agent live — no setup needed](https://danish-ai-agent.streamlit.app)**
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://danish-ai-agent.streamlit.app)
 [![HuggingFace RAG](https://img.shields.io/badge/HuggingFace-RAG%20Chatbot-yellow)](https://huggingface.co/spaces/danish811/rag-chatbot-v3)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue)]()
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.1.9-orange)]()
+[![Python](https://img.shields.io/badge/Python-3.10+-blue)]()
 
 ---
 
 ## What This Is
 
-A series of 8 LangGraph agents — each one building on the last.
-Built to prove production AI engineering skills, not just to learn.
+8 LangGraph agents built in progression. Each version builds on the last.
+Not a course project. Built to prove production AI engineering skills to employers.
 
-**V8 (live now)** — personal AI agent with:
-- 🧮 Real math via AST-safe calculator (no eval() — security by design)
-- 🌤️ Live weather from wttr.in (real data, no fake responses)
+**V8 is live** — personal AI agent with:
+- 🧮 Safe math via AST-based calculator (no eval() — security by design)
+- 🌤️ Live weather via wttr.in (real data, no fake responses)
 - 🧠 Dual memory — short-term per conversation + long-term across sessions
-- 👤 UUID session isolation — each visitor gets their own memory namespace
+- 👤 UUID per visitor — memory never leaks between public users
 
 ---
 
 ## The Series
 
-| Version | What It Builds | Key Concept Demonstrated |
-|---------|---------------|--------------------------|
-| V1 | Pure graph — no LLM | StateGraph, nodes, edges, TypedDict state |
+| # | What It Builds | Key Concept |
+|---|---------------|-------------|
+| V1 | Pure graph — no LLM | StateGraph, nodes, edges, TypedDict |
 | V2 | LLM + conversation memory | MessagesState, InMemorySaver, thread_id |
-| V3 | Tool calling agent | @tool decorator, ToolNode, bind_tools |
+| V3 | Tool calling | @tool, ToolNode, tools_condition, bind_tools |
 | V4 | Multi-agent routing | Conditional edges, classifier node, Literal router |
-| V5 | Dual memory system | InMemorySaver (short) + InMemoryStore (long) |
+| V5 | Dual memory | InMemorySaver (short-term) + InMemoryStore (long-term) |
 | V6 | MCP agent | FastMCP 3.4.2, langchain-mcp-adapters, streamable-http |
 | V7 | Production agent | V5 dual memory + V6 MCP tools combined |
-| **V8** | **Streamlit deployment** | **Public web app, UUID session isolation, caching** |
+| **V8** | **Deployed web app** | **Streamlit, UUID session isolation, st.cache_resource** |
 
 ---
 
-## V8 Architecture
-Browser visitor
+## V8 — Architecture
+Visitor opens link
 
 ↓
 
-[Streamlit UI — st.cache_resource, UUID per session]
+Streamlit (UUID per visitor via st.session_state)
 
 ↓
 
-load_memories — reads facts from InMemoryStore
+load_memories  →  reads user facts from InMemoryStore
 
 ↓
 
-agent — llama-3.3-70b-versatile, temperature=0
+agent  →  llama-3.3-70b-versatile, temperature=0
 
-↓  (if tool needed)
+↓  tool needed?
 
-tools — AST calculator OR wttr.in live weather
-
-↓
-
-agent — final answer
+tools  →  AST calculator OR wttr.in live weather
 
 ↓
 
-save_memories — extracts facts, writes back to store
+agent  →  final answer with tool result
 
 ↓
 
-[Browser — st.status shows live tool call progress]
-Browser visitor
+save_memories  →  extracts facts, writes to InMemoryStore
 
 ↓
 
-[Streamlit UI — st.cache_resource, UUID per session]
+Streamlit (live progress via st.status)
+Each visitor gets their own UUID on first load.
+`thread_id` = short-term memory scope.
+`user_id` = long-term memory scope.
+Memory never crosses between visitors.
 
-↓
+---
 
-load_memories — reads facts from InMemoryStore
+## Tech Stack
 
-↓
+| Layer | Technology | Version |
+|-------|-----------|---------|
+| Agent framework | LangGraph | 1.1.9 |
+| LLM | Groq llama-3.3-70b-versatile | temperature=0 |
+| Short-term memory | LangGraph InMemorySaver | — |
+| Long-term memory | LangGraph InMemoryStore | — |
+| MCP server (V6, V7) | FastMCP | 3.4.2 |
+| MCP client (V6, V7) | langchain-mcp-adapters | 0.3.0 |
+| Embeddings (RAG v3) | all-MiniLM-L6-v2 | 384-dim |
+| Web UI | Streamlit | — |
+| Deployment | Streamlit Community Cloud | free tier |
 
-agent — llama-3.3-70b-versatile, temperature=0
+---
 
-↓  (if tool needed)
+## Architecture Decisions
 
-tools — AST calculator OR wttr.in live weather
+Every significant design choice is documented in
+[DECISIONS.md](DECISIONS.md) using MADR 4.0.0 format.
 
-↓
+11 decisions documented including:
+- AST over eval() for calculator security
+- streamable-http over stdio/SSE for Colab stability
+- InMemorySaver + InMemoryStore for dual memory scopes
+- UUID per session for public multi-user isolation (V8)
+- Direct tool calls over MCP server for V8 deployment reliability
 
-agent — final answer
+---
 
-↓
+## Other Portfolio Projects
 
-save_memories — extracts facts, writes back to store
+| Project | Description | Link |
+|---------|-------------|------|
+| RAG Chatbot v3 | LangChain + FAISS + Groq. PDF upload up to 200MB. | [Live on HuggingFace](https://huggingface.co/spaces/danish811/rag-chatbot-v3) |
+| DistilBERT Spam Classifier | Fine-tuned transformer. 99.19% accuracy. | [HuggingFace Hub](https://huggingface.co/danish811/spam-detector-distilbert) |
 
-↓
+---
 
-[Browser — st.status shows live tool call progress]
+## Run Locally
+
+```bash
+git clone https://github.com/muhammeddanisht/langgraph-agents
+cd langgraph-agents
+pip install -r requirements.txt
+```
+
+Add your key to `.streamlit/secrets.toml`:
+```toml
+GROQ_API_KEY = "your_key_here"
+```
+
+Run:
+```bash
+python -m streamlit run app.py
+```
+
+---
+
+## Contact
+
+**Muhammed Danish T.** — AI Engineer (Open to Work)
+
+[![GitHub](https://img.shields.io/badge/GitHub-muhammeddanisht-black)](https://github.com/muhammeddanisht)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-muhammeddanisht-blue)](https://linkedin.com/in/muhammeddanisht)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-danish811-yellow)](https://huggingface.co/danish811)
