@@ -11,8 +11,6 @@
 | Project | Link | Status |
 |---------|------|--------|
 | LangGraph Agent V8 | [danish-ai-agent.streamlit.app](https://danish-ai-agent.streamlit.app) | Live |
-| RAG Chatbot V3 | [huggingface.co/spaces/danish811/rag-chatbot-v3](https://huggingface.co/spaces/danish811/rag-chatbot-v3) | Live |
-| DistilBERT Spam Classifier | [huggingface.co/danish811/spam-detector-distilbert](https://huggingface.co/danish811/spam-detector-distilbert) | Live |
 
 ---
 
@@ -295,16 +293,6 @@ All major design choices are documented in
 - Tool execution approach
 - Graph architecture
 - Deployment simplification
-
----
-
-## Other Portfolio Projects
-
-| Project | Description | Stack | Link |
-|---------|-------------|-------|------|
-| RAG Chatbot V3 | PDF upload up to 200MB, Q&A over documents | LangChain, FAISS, MiniLM, Groq, Streamlit | [HuggingFace Spaces](https://huggingface.co/spaces/danish811/rag-chatbot-v3) |
-| DistilBERT Spam Classifier | 99.19% accuracy on SMS spam detection | HuggingFace Transformers, PyTorch, DistilBERT | [HuggingFace Hub](https://huggingface.co/danish811/spam-detector-distilbert) |
-| Transformer from Scratch | Built full transformer in PyTorch. Loss 1.5 to 0.27 over 200 epochs | PyTorch | GitHub |
 
 ---
 
